@@ -46,6 +46,36 @@ st.header("Resume Review System")
 jd = st.text_area("Job Description:", key="input")
 uploaded_file = st.file_uploader("Upload your resume (PDF)...", type=["pdf"])
 
+input_prompt_name = """
+Extract the name of the student from the resume text.
+"""
+
+input_prompt_college = """
+Extract the college of the student from the resume text.
+"""
+
+input_prompt_roll_number = """
+Extract the roll number of the student from the resume text."""
+
+input_prompt_branch = """
+Extract the engineering branch of the student from the resume text."""
+
+input_prompt_cgpa= """
+Extract the CGPA or percentage of the student mentioned in the resume text. Just give the number as output."""
+
+input_prompt_interest = """
+Identify the area of interest of the student from the resume text based on the projects mentioned or experiences . Possible areas include Frontend, Backend, Data Science, Data Analyst, or core branches roles like process engineeringetc.
+"""
+input_prompt_rating = """
+Evaluate the resume based on the following criteria:
+1. Quality of projects and experiences
+2. Presentation and formatting
+3. Position of responsibilities under taken
+Provide a rating out of 10, considering all these aspects.
+Provide only the number and no other information.
+"""
+
+
 if uploaded_file is not None:
     st.write("PDF Uploaded Successfully")
 
