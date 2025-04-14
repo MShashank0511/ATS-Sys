@@ -5,7 +5,9 @@ import io
 import base64
 from PyPDF2 import PdfReader
 import google.generativeai as genai
+from dotenv import load_dotenv
 
+load_dotenv()
 # Configure Google Generative AI
 api_key = os.getenv('GOOGLE_API_KEY')
 if not api_key:
