@@ -78,6 +78,30 @@ Provide only the number and no other information.
 
 if uploaded_file is not None:
     st.write("PDF Uploaded Successfully")
+    
+    pdf_content=input_pdf_setup(uploaded_file)
+    name_response = get_gemini_response(pdf_content, input_prompt_name,input_prompt_name)
+    college_response = get_gemini_response(pdf_content, input_prompt_college,input_prompt_college)
+    roll_number_response = get_gemini_response(pdf_content, input_prompt_roll_number,input_prompt_roll_number)
+    branch_response = get_gemini_response(pdf_content, input_prompt_branch,input_prompt_branch)
+    interest_response = get_gemini_response(pdf_content, input_prompt_interest,input_prompt_interest)
+    rating_response = get_gemini_response(pdf_content, input_prompt_rating,input_prompt_rating)
+    cgpa_response = get_gemini_response(pdf_content, input_prompt_cgpa,input_prompt_cgpa)
+    
+    if(len(roll_number_response)>15):
+        roll_number_response="NULL"
+    if(len(cgpa_response)>15):
+        cgpa_response="NULL"
+
+    st.write(f"Name: {name_response.strip()}")
+    st.write(f"College: {college_response.strip()}")
+    st.write(f"Roll Number: {roll_number_response.strip()}")
+    st.write(f"Branch: {branch_response.strip()}")
+    st.write(f"Area of Interest: {interest_response.strip()}")
+    st.write(f"Rating: {rating_response.strip()}")
+    st.write(f"CGPA: {cgpa_response.strip()}")
+    
+
 
 submit1 = st.button("Tell Me About the Resume")
 submit2 = st.button("How Can I Improvise my Skills")
