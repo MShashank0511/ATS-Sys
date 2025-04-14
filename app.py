@@ -16,7 +16,7 @@ genai.configure(api_key=api_key)
 
 def get_gemini_response(input, pdf_content, prompt):
     try:
-        model = genai.GenerativeModel('gemini-pro')
+        model = genai.GenerativeModel('gemini-1.0-pro')
         response = model.generate_content([input, pdf_content, prompt])
         return response.text
     except Exception as e:
