@@ -129,8 +129,9 @@ and finally, final thoughts.
 """
 
 input_prompt4 = """
-I have a job description and a resume. The job description lists certain skills and qualifications required for the position. 
-The resume, however, is missing some of these skills. Please generate a list of the best online resources 
+I have a job description and a resume. The job description lists certain 
+skills and qualifications required for the position. 
+The resume, however, is missing some of these skills. Generate a list of the best online resources 
 (such as courses, tutorials, books, or articles) that can help someone acquire the missing skills mentioned in the 
 job description. Here are the details:
 
