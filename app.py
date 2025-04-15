@@ -110,7 +110,8 @@ submit4 = st.button("Resources to Upskill")
 
 input_prompt1 = """
 You are an experienced Technical Human Resource Manager. Your task is to review the provided resume. Give a brief introduction 
-about the candidate including their name, education, experiences, and skills in one paragraph. Please share your professional evaluation on whether the candidate's profile is technically strong or not. 
+about the candidate including their name, education, experiences, and skills in one paragraph.
+Please share your professional evaluation on whether the candidate's profile is technically strong or not. 
 Highlight the strengths and weaknesses of the applicant based on the skills and experiences mentioned in the resume. 
 Provide an overall assessment of the candidate's technical proficiency with respect to the job description provided finally.
 """
